@@ -3,11 +3,11 @@ import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Navbar from "./layout/Navbar";
 import Topbar from "./layout/Topbar";
-import About from "./pages/About";
-import Academics from "./pages/Academics";
-import Admissions from "./pages/Admissions";
-import Contact from "./pages/Contact";
-import Facilities from "./pages/Facilities";
+// import About from "./pages/About";
+// import Academics from "./pages/Academics";
+// import Admissions from "./pages/Admissions";
+// import Contact from "./pages/Contact";
+// import Facilities from "./pages/Facilities";
 import Home from "./pages/Home";
 
 function App() {
@@ -18,11 +18,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/admissions" element={<Admissions />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/academics" element={<Academics />} /> */}
+        {/* <Route path="/admissions" element={<Admissions />} /> */}
+        {/* <Route path="/facilities" element={<Facilities />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       <Footer />
     </div>
