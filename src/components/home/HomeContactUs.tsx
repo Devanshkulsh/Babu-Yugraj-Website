@@ -7,10 +7,24 @@ const socialLinks = [
 ];
 
 const contactCards = [
-  { label: "Call Us", value: "+91 00000 00000 / +91 11111 11111" },
-  { label: "Email", value: "admissions@babuyugraj.edu.in" },
+  {
+    label: "Call Us",
+    value: "+91-8303700428 / +91-8303700429",
+    href: "tel:+918303700428",
+  },
+  {
+    label: "Email",
+    value: "babuyugrajsinghayurveda@gmail.com",
+    href: "mailto:babuyugrajsinghayurveda@gmail.com",
+  },
   { label: "College Code", value: "AYU0636" },
-  { label: "Address", value: "Campus Address, City, State, India" },
+  {
+    label: "Address",
+    value:
+      "Babu Yugraj Singh Ayurvedic Medical College & Hospital, Sector 6, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010",
+    href:
+      "https://www.google.com/maps/place/Babu+Yugraj+Singh+Ayurvedic+Medical+College+And+Hospital/@26.8292395,81.0199466,17z",
+  },
 ];
 
 const HomeContactUs = () => {
@@ -33,9 +47,16 @@ const HomeContactUs = () => {
           <div className="order-2 flex flex-col gap-6 lg:order-1">
             <div className="grid grid-cols-1 gap-4 xs:grid-cols-2 lg:gap-6">
               {contactCards.map((card) => (
-                <div
+                <a
                   key={card.label}
-                  className="flex flex-col justify-center rounded-3xl border border-emerald-900/5 bg-white p-6 shadow-sm transition-all hover:shadow-md sm:rounded-4xl sm:p-8"
+                  href={card.href}
+                  target={card.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={card.href?.startsWith("http") ? "noreferrer" : undefined}
+                  className={`flex flex-col justify-center rounded-3xl border border-emerald-900/5 bg-white p-6 shadow-sm transition-all sm:rounded-4xl sm:p-8 ${
+                    card.href
+                      ? "cursor-pointer hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2"
+                      : "cursor-default"
+                  }`}
                 >
                   <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-rose-900 sm:text-xs">
                     {card.label}
@@ -43,7 +64,7 @@ const HomeContactUs = () => {
                   <p className="mt-3 text-sm font-medium leading-relaxed text-slate-700 sm:mt-4 sm:text-base lg:text-lg">
                     {card.value}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
 
@@ -80,7 +101,7 @@ const HomeContactUs = () => {
             <div className="h-64 overflow-hidden rounded-2xl sm:h-96 lg:h-full">
               <iframe
                 title="College location map"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14247.97127928238!2d81.042784!3d26.77651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be59419363919%3A0xcd93b21c21b293cd!2sBabu%20Yugraj%20Singh%20Ayurvedic%20Medical%20College%20%26%20Hospital!5e0!3m2!1sen!2sin!4v1714392000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.33675341842!2d81.01994661245459!3d26.829239476599952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3946fdb3b69%3A0x7a9955446ed14905!2sBabu%20Yugraj%20Singh%20Ayurvedic%20Medical%20College%20And%20Hospital!5e0!3m2!1sen!2sin!4v1777464927720!5m2!1sen!2sin"
                 className="h-full w-full border-0 grayscale-[0.2] contrast-[1.1]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

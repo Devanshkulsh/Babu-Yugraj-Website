@@ -115,9 +115,12 @@ const Footer = () => {
           </p>
           <div className="mt-4 space-y-2.5 text-sm leading-6 text-emerald-50/75 sm:mt-5 sm:space-y-3 sm:leading-7">
             <p>College Code: AYU0636</p>
-            <p>Phone: +91 00000 00000 / +91 11111 11111</p>
-            <p>Email: admissions@babuyugraj.edu.in</p>
-            <p>Campus Address, City, State, India</p>
+            <p>Phone: +91-8303700428 / +91-8303700429</p>
+            <p>Email: babuyugrajsinghayurveda@gmail.com</p>
+            <p>
+              Address: Babu Yugraj Singh Ayurvedic Medical College & Hospital,
+              Sector 6, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010
+            </p>
           </div>
         </div>
 
