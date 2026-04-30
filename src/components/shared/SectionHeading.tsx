@@ -23,7 +23,7 @@ const SectionHeading = ({
     >
       {eyebrow ? (
         <div
-          className={`mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-emerald-900 shadow-sm ${
+          className={`mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-900 shadow-sm sm:mb-6 sm:text-sm ${
             isCentered ? "mx-auto" : ""
           }`}
         >
@@ -35,13 +35,13 @@ const SectionHeading = ({
         </div>
       ) : null}
 
-      <h2 className="mb-6 text-4xl font-extrabold leading-[1.1] text-slate-900 sm:text-5xl">
+      <h2 className="mb-5 text-3xl font-extrabold leading-[1.1] text-slate-900 sm:mb-6 sm:text-4xl lg:text-5xl">
         {title}
       </h2>
 
       {description ? (
         <p
-          className={`text-lg leading-relaxed text-slate-600 ${
+          className={`text-base leading-relaxed text-slate-600 sm:text-lg ${
             isCentered ? "mx-auto max-w-3xl" : ""
           }`}
         >

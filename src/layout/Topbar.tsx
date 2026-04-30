@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-
 const contactNumbers = ["+91-8303700428", "+91-8303700429"];
 const campusAddress = "Gomti Nagar Extension, Lucknow";
 const campusMapUrl =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.33675341842!2d81.01994661245459!3d26.829239476599952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3946fdb3b69%3A0x7a9955446ed14905!2sBabu%20Yugraj%20Singh%20Ayurvedic%20Medical%20College%20And%20Hospital!5e0!3m2!1sen!2sin!4v1777464927720!5m2!1sen!2sin";
 const collegeCode = "AYU0636";
+const counsellingWhatsappUrl =
+  "https://wa.me/918303700428?text=Hello%2C%20I%20would%20like%20to%20get%20admission%20counselling.";
 
 const Topbar = () => {
   return (
@@ -51,12 +51,14 @@ const Topbar = () => {
           </a>
         </div>
 
-        <Link
+        <a
           className="inline-flex min-h-11 w-full shrink-0 items-center justify-center rounded-full bg-amber-400 px-5 py-2.5 text-sm font-extrabold text-slate-800 shadow-[0_10px_24px_rgba(240,180,41,0.28)] transition-transform active:scale-95 sm:min-h-10 lg:w-auto lg:px-6 lg:py-2"
-          to="/admissions"
+          href={counsellingWhatsappUrl}
+          target="_blank"
+          rel="noreferrer"
         >
-          Apply Now
-        </Link>
+          Get Counselling
+        </a>
       </div>
     </div>
   );
