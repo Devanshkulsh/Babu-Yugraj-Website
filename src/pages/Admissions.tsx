@@ -38,14 +38,7 @@ const Admissions = () => {
           />
 
           <div className="overflow-hidden rounded-[1.75rem] border border-emerald-900/10 bg-white/85 shadow-xl shadow-emerald-950/5 backdrop-blur-sm sm:rounded-4xl">
-            <div className="border-b border-emerald-900/10 bg-[#f6f4ee] px-4 py-4 sm:px-8 sm:py-6">
-              <h2 className="text-lg font-black text-slate-900 sm:text-2xl">
-                Admission Enquiry Form
-              </h2>
-              <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-                Fill in your details and our admission team will contact you.
-              </p>
-            </div>
+            
 
             {!formLoaded && (
               <div className="mx-4 mt-4 rounded-2xl border border-amber-300/60 bg-amber-50 px-4 py-3 sm:mx-8 sm:mt-5">
