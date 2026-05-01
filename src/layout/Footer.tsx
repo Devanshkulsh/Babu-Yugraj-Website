@@ -12,7 +12,7 @@ const footerLinks = [
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/bysayurvedic226010/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -26,7 +26,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/bys_ayurvedic_official/",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -43,8 +43,22 @@ const socialLinks = [
     ),
   },
   {
+    label: "X",
+    href: "https://x.com/YugrajCollege",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        className="h-5 w-5"
+      >
+        <path d="M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.24L6.66 22H3.54l7.25-8.29L1 2h6.25l4.32 5.7L18.9 2Zm-1.07 18h1.69L6.33 3.9H4.52L17.83 20Z" />
+      </svg>
+    ),
+  },
+  {
     label: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@BabuYugrajSinghAyurvedicMedica",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -58,7 +72,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/babu-yugraj-singh-ayurvedic-medical-college-and-hospital-7958a9307/",
     icon: (
       <svg
         viewBox="0 0 24 24"

@@ -1,9 +1,20 @@
 import SectionHeading from "../shared/SectionHeading";
 
 const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "YouTube", href: "https://youtube.com" },
+  { label: "Facebook", href: "https://www.facebook.com/bysayurvedic226010/" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/bys_ayurvedic_official/",
+  },
+  { label: "X", href: "https://x.com/YugrajCollege" },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@BabuYugrajSinghAyurvedicMedica",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/babu-yugraj-singh-ayurvedic-medical-college-and-hospital-7958a9307/",
+  },
 ];
 
 const contactCards = [

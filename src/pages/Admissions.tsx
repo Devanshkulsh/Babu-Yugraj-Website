@@ -46,7 +46,8 @@ const Admissions = () => {
             eyebrow="Admissions"
             title={
               <>
-                Begin Your <span className="text-emerald-800">Admission Enquiry</span>
+                Begin Your{" "}
+                <span className="text-emerald-800">Admission Enquiry</span>
               </>
             }
             description="Fill out the enquiry form and our team will guide you through the next steps for BAMS admission in a clear and supportive way."
@@ -106,16 +107,16 @@ const Admissions = () => {
                   Share your details with us
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
-                  Complete the form below and our team will contact you regarding
-                  the next steps.
+                  Complete the form below and our team will contact you
+                  regarding the next steps.
                 </p>
               </div>
 
               {!formLoaded && (
                 <div className="mx-4 mt-4 rounded-2xl border border-amber-300/60 bg-amber-50 px-4 py-3 sm:mx-8 sm:mt-5">
                   <p className="text-xs leading-6 text-slate-600 sm:text-sm">
-                    If the admission form does not appear below, please reload the
-                    page.
+                    If the admission form does not appear below, please reload
+                    the page.
                   </p>
                 </div>
               )}
