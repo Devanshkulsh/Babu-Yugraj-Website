@@ -1,10 +1,45 @@
 import { useEffect, useState } from "react";
 import SectionHeading from "../components/shared/SectionHeading";
 
+const FORM_SCRIPT_ID = "ntechzy-admissions-form-script";
+
 const Admissions = () => {
   const [formLoaded, setFormLoaded] = useState(false);
 
   useEffect(() => {
+    const mountFormScript = () => {
+      const existingScript = document.getElementById(
+        FORM_SCRIPT_ID,
+      ) as HTMLScriptElement | null;
+
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      const formContainer = document.getElementById("formsID7375");
+
+      if (!formContainer) {
+        return;
+      }
+
+      formContainer.innerHTML = "";
+
+      const script = document.createElement("script");
+      script.id = FORM_SCRIPT_ID;
+      script.src = "https://ntechzy.in/api/v1/student-form/form.js";
+      script.type = "module";
+      script.setAttribute("path", '["/", "/dynamicForm/index.html","/admissions"]');
+      script.setAttribute("divid", "formsID7375");
+      script.setAttribute("courses", '["Select Course","BAMS"]');
+      script.setAttribute("styles", "classic");
+      script.setAttribute("logo", "/logo.png");
+      script.setAttribute("contact", "8303700428");
+
+      document.body.appendChild(script);
+    };
+
+    mountFormScript();
+
     const checkFormInterval = window.setInterval(() => {
       const formContainer = document.getElementById("formsID7375");
 
@@ -14,7 +49,14 @@ const Admissions = () => {
       }
     }, 500);
 
-    return () => window.clearInterval(checkFormInterval);
+    return () => {
+      window.clearInterval(checkFormInterval);
+
+      const existingScript = document.getElementById(FORM_SCRIPT_ID);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
   }, []);
 
   return (
