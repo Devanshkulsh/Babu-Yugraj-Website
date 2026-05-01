@@ -4,7 +4,7 @@ const footerLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Academics", to: "/academics" },
-  { label: "Admissions", to: "/admissions" },
+  { label: "Admissions", to: "/admission" },
   { label: "Facilities", to: "/facilities" },
   { label: "Contact", to: "/contact" },
 ];

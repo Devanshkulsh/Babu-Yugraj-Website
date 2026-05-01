@@ -11,10 +11,12 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/about/AboutUs";
 import ManagementMessage from "./pages/about/ManagementMessage";
 import OurTeam from "./pages/about/OurTeam";
+import Admissions from "./pages/Admissions";
 import HospitalStaffAttendance from "./pages/staff/HospitalStaffAttendance";
 import NonTeachingStaffAttendance from "./pages/staff/NonTeachingStaffAttendance";
 import TeachingStaffAttendance from "./pages/staff/TeachingStaffAttendance";
 import Infrastructure from "./pages/college/Infrastructure";
+import Labs from "./pages/college/Labs";
 import PaperBookPublished from "./pages/college/PaperBookPublished";
 import DocumentViewer from "./pages/DocumentViewer";
 import BedOccupancyRecords from "./pages/hospital/BedOccupancyRecords";
@@ -36,6 +38,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admission" element={<Admissions />} />
+        <Route path="/admissions" element={<Admissions />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/managementMessage" element={<ManagementMessage />} />
         <Route path="/our-team" element={<OurTeam />} />
@@ -51,14 +55,9 @@ function App() {
           path="/staff/monthly-attendance/hospital-staff"
           element={<HospitalStaffAttendance />}
         />
-        <Route
-          path="/infrastructure"
-          element={<Infrastructure />}
-        />
-        <Route
-          path="/paper-book-published"
-          element={<PaperBookPublished />}
-        />
+        <Route path="/infrastructure" element={<Infrastructure />} />
+        <Route path="/labs" element={<Labs />} />
+        <Route path="/paper-book-published" element={<PaperBookPublished />} />
         <Route path="/hospital/opd" element={<OpdRecords />} />
         <Route path="/hospital/ipd" element={<IpdRecords />} />
         <Route
@@ -73,7 +72,6 @@ function App() {
         <Route path="/admission-process" element={<AdmissionProcess />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
-        {/* <Route path="/admissions" element={<Admissions />} /> */}
         {/* <Route path="/facilities" element={<Facilities />} /> */}
       </Routes>
       <Footer />

@@ -44,11 +44,24 @@ const FacultyCard: React.FC<FacultyCardProps> = ({
     <div className="group w-full max-w-md overflow-hidden rounded-4xl border border-emerald-900/10 bg-white shadow-xl shadow-emerald-950/5 transition-all hover:shadow-2xl hover:shadow-emerald-950/10">
       {/* Profile Image Section */}
       <div className="relative h-72 w-full overflow-hidden bg-slate-100">
-        <img
-          src={image}
-          alt={name}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-emerald-100 via-[#f6f4ee] to-rose-100 px-6 text-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-emerald-800">
+                Image Pending
+              </p>
+              <h3 className="mt-3 text-2xl font-black text-slate-800">
+                {name}
+              </h3>
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-linear-to-t from-emerald-950/80 via-transparent to-transparent" />
 
         {/* Floating Identity Label */}

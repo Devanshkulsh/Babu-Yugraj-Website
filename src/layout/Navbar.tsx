@@ -89,23 +89,7 @@ const navLinks: NavLinkItem[] = [
     submenu: [
       {
         label: "Lab",
-        to: "",
-        submenu: [
-          { label: "Rachna Sharir", to: "" },
-          { label: "Samhita Siddhant Evam Sanskrit", to: "" },
-          { label: "Kriya Sharir", to: "" },
-          { label: "Ras Shastra Evam Bhaishajya Kalpana", to: "" },
-          { label: "Dravyaguna Vigyan", to: "" },
-          { label: "Raga Nidan Evam Vikriti Vigyan", to: "" },
-          { label: "Swasthavritta Evam Yoga", to: "" },
-          { label: "Agad Tantra", to: "" },
-          { label: "Shalya Tantra", to: "" },
-          { label: "Shalakya", to: "" },
-          { label: "Panchkarma", to: "" },
-          { label: "Kaya Chikitsa", to: "" },
-          { label: "Bal Rog", to: "" },
-          { label: "Prasuti & Stri Roga", to: "" },
-        ],
+        to: "/labs",
       },
       {
         label: "Infrastructure",
@@ -440,7 +424,7 @@ const Navbar = () => {
         <div className="hidden shrink-0 lg:block">
           <Link
             className="rounded-full bg-rose-900 px-6 py-2.5 text-sm font-bold text-white transition-transform hover:bg-rose-950 active:scale-95 shadow-md"
-            to="/admissions"
+            to="/admission"
           >
             Apply Now
           </Link>
@@ -642,7 +626,7 @@ const Navbar = () => {
           <div className="pt-4">
             <Link
               className="flex w-full items-center justify-center rounded-xl bg-rose-900 py-4 text-base font-bold text-white active:bg-rose-950"
-              to="/admissions"
+              to="/admission"
               onClick={closeMenu}
             >
               Apply for Admission

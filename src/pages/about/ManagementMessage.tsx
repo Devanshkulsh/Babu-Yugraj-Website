@@ -2,44 +2,55 @@ import SectionHeading from "../../components/shared/SectionHeading";
 
 type MessageItem = {
   role: string;
+  organization?: string;
   name: string;
   image: string;
   message: string;
-  signature?: string;
+  email?: string;
+  contactNo?: string;
+  footerRole?: string;
 };
 
 const managementData: MessageItem[] = [
   {
-    role: "Chairman",
-    name: "Dr. Singh",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-    message:
-      "Our vision is to cultivate an environment where Ayurvedic traditions are preserved and propelled into the future. We are committed to providing the highest standards of education and clinical practice to ensure our students become world-class healers.",
-  },
-  {
     role: "Vice Chancellor",
-    name: "Prof. R.K. Sharma",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+    organization: "Mahayogi Guru Gorakhnath Ayush University",
+    name: "Prof. (Dr.) A.K.Singh",
+    image: "/vice-chancellor.jpg",
     message:
-      "Academic excellence is the cornerstone of our institution. We bridge the gap between ancient Shastras and modern diagnostics, ensuring our curriculum remains rigorous, relevant, and deeply rooted in ethical medical practice.",
+      "MAHAYOGI GURU GORAKHNATH AYUSH UNIVERSITY",
+    email: "vc@mggaugk.ac.in",
+    contactNo: "+91 91 8810724949",
+    footerRole: "Vice Chancellor",
   },
   {
     role: "Registrar",
-    name: "Dr. Amit Verma",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+    organization: "Mahayogi Guru Gorakhnath Ayush University",
+    name: "Shri R.B.Singh",
+    image: "/registrar.jpeg",
     message:
-      "We ensure a seamless administrative experience that supports the academic journey of every student. Transparency, discipline, and student welfare are our primary objectives in maintaining the integrity of our college.",
+      "MAHAYOGI GURU GORAKHNATH AYUSH UNIVERSITY",
+    email: "rbsingh4478@gmail.com",
+    contactNo: "+91 8810724948",
+    footerRole: "Registrar",
   },
   {
-    role: "Principal",
-    name: "Dr. S. Deepa",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+    role: "Chairman Message",
+    organization: "Babu Yugraj Singh Ayurvedic Medical College & Hospital",
+    name: "Chairman",
+    image: "/chairman.jpeg",
     message:
-      "At the heart of our college is the integration of classroom learning with bedside clinical experience. We nurture our students to handle modern healthcare challenges with the holistic perspective that only Ayurveda can provide.",
+      "Our institution has continually ranked as the top most technical college in North India, and we have developed ourselves as the first preference for students seeking quality education coming from this region and now expanding to other parts of the country as well. Our group of colleges always remains in the process of building success in academics, quality placements, research, industry interface, international exposure and extra-curricular activities. It is remarkable that we have established strong connects in industry and developed many corporate affiliates across different verticals. We have a strong industry-institute interface and are endorsed by some of the most renowned companies .",
+    footerRole: "Chairman, BYSMC",
+  },
+  {
+    role: "Principal Message",
+    organization: "Babu Yugraj Singh Ayurvedic Medical College & Hospital, Lucknow",
+    name: "Prof. Prof. (Dr.) Dhurwa Kumar",
+    image: "/principal.jpg",
+    message:
+      "Our mission to provide value based quality educations and development of the institute to a centre of excellence. All initiatives are students centric focusing on empowering capacity building. entrepreneurship and inculcating lifelong learning habits. Institute has excellent learning facilities and equipments. Library stocked with Sufficient books reference books, Magazines, journals- Nationals, Internationals",
+    footerRole: "Principal",
   },
 ];
 
@@ -111,15 +122,40 @@ const ManagementMessage = () => {
 
                   {/* Styled Message Card according to stats bar logic */}
                   <div className="relative rounded-2xl border border-emerald-900/5 border-l-4 border-l-rose-900 bg-white/70 p-6 sm:p-10 shadow-sm backdrop-blur-sm lg:rounded-r-3xl">
+                    {leader.organization ? (
+                      <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-rose-900">
+                        {leader.organization}
+                      </p>
+                    ) : null}
                     <p className="text-lg leading-relaxed italic text-slate-700 sm:text-xl">
                       "{leader.message}"
                     </p>
+                    {leader.email || leader.contactNo ? (
+                      <div className="mt-6 grid gap-3 border-t border-emerald-900/10 pt-6 text-sm text-slate-700">
+                        {leader.email ? (
+                          <p>
+                            <span className="font-bold text-slate-900">
+                              E-Mail ID:
+                            </span>{" "}
+                            {leader.email}
+                          </p>
+                        ) : null}
+                        {leader.contactNo ? (
+                          <p>
+                            <span className="font-bold text-slate-900">
+                              Contact No:
+                            </span>{" "}
+                            {leader.contactNo}
+                          </p>
+                        ) : null}
+                      </div>
+                    ) : null}
                     <div className="mt-8 pt-6 border-t border-emerald-900/10">
                       <p className="font-black text-slate-900 uppercase tracking-tighter text-xl">
                         {leader.name}
                       </p>
                       <p className="text-sm font-bold text-rose-900 uppercase tracking-widest">
-                        {leader.role}, BYSMC
+                        {leader.footerRole || leader.role}
                       </p>
                     </div>
                   </div>
