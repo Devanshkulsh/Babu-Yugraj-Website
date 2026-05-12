@@ -29,10 +29,12 @@ import StudentList from "./pages/student-corner/StudentList";
 import AdmissionProcess from "./pages/student-corner/admission-information/AdmissionProcess";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(240,180,41,0.16),transparent_32%),linear-gradient(180deg,#fcfbf7_0%,#f6f4ee_100%)] text-slate-800">
+      <ScrollToTop />
       <Topbar />
       <Header />
       <Navbar />
