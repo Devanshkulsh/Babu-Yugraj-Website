@@ -14,11 +14,21 @@ const Topbar = () => {
           className="grid w-full grid-cols-1 gap-2 min-[480px]:grid-cols-2 lg:flex lg:w-auto lg:flex-wrap lg:items-center"
           aria-label="School contacts"
         >
+          <a
+            href={`tel:${contactNumbers[0].replace(/\s+/g, "")}`}
+            className="inline-flex min-h-11 items-center justify-between gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-[12px] transition-colors hover:bg-white/20 sm:text-[13px] lg:hidden"
+          >
+            <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.08em] text-white/60 sm:text-[0.72rem]">
+              Call
+            </span>
+            <span className="truncate text-right">{contactNumbers[0]}</span>
+          </a>
+
           {contactNumbers.map((phoneNumber) => (
             <a
               key={phoneNumber}
               href={`tel:${phoneNumber.replace(/\s+/g, "")}`}
-              className="inline-flex min-h-11 items-center justify-between gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-[12px] transition-colors hover:bg-white/20 sm:text-[13px] lg:min-h-0 lg:rounded-full lg:py-1.5"
+              className="hidden min-h-11 items-center justify-between gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-[12px] transition-colors hover:bg-white/20 sm:text-[13px] lg:inline-flex lg:min-h-0 lg:rounded-full lg:py-1.5"
             >
               <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.08em] text-white/60 sm:text-[0.72rem]">
                 Call
@@ -27,7 +37,7 @@ const Topbar = () => {
             </a>
           ))}
 
-          <div className="inline-flex min-h-11 items-center justify-between gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-[12px] sm:text-[13px] lg:min-h-0 lg:rounded-full lg:py-1.5">
+          <div className="hidden min-h-11 items-center justify-between gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-[12px] sm:text-[13px] lg:inline-flex lg:min-h-0 lg:rounded-full lg:py-1.5">
             <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.08em] text-white/60 sm:text-[0.72rem]">
               College Code
             </span>
